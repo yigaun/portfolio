@@ -84,4 +84,19 @@
 		$(".project2").slideDown(2000);
 		$(".next a").hide();
 	});
+	$(function(){
+	var agent=navigator.userAgent.toLowerCase();
+	var path="";
+
+	if(agent.indexOf("android") != -1 || agent.indexOf("iphone") != -1 || agent.indexOf("ipad") != -1){
+		// Mobile URL입니다.
+		path="project1/mobile/index.html";
+	}
+	else{
+		// PC URL입니다.
+		path="project1/pc/index.html";
+	}
+
+	$("#project1").attr({href:path});
+});
 });
