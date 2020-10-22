@@ -85,18 +85,33 @@
 		$(".next a").hide();
 	});
 	$(function(){
-	var agent=navigator.userAgent.toLowerCase();
-	var path="";
+		var agent=navigator.userAgent.toLowerCase();
+		var path="";
 
-	if(agent.indexOf("android") != -1 || agent.indexOf("iphone") != -1 || agent.indexOf("ipad") != -1){
-		// Mobile URL입니다.
-		path="project1/mobile/index.html";
-	}
-	else{
-		// PC URL입니다.
-		path="project1/pc/index.html";
-	}
+		if(agent.indexOf("android") != -1 || agent.indexOf("iphone") != -1 || agent.indexOf("ipad") != -1){
+			// Mobile URL입니다.
+			path="project1/mobile/index.html";
+		}
+		else{
+			// PC URL입니다.
+			path="project1/pc/index.html";
+		}
 
-	$("#project1").attr({href:path});
-});
+		$("#project1").attr({href:path});
+	});
+	$(function(){
+		var agent=navigator.userAgent.toLowerCase();
+		var path="";
+
+		if(agent.indexOf("android") != -1 || agent.indexOf("iphone") != -1 || agent.indexOf("ipad") != -1){
+			// Mobile URL입니다.
+			path="project2/mobile/index.html";
+		}
+		else{
+			// PC URL입니다.
+			path="project2/pc/index.html";
+		}
+
+		$("#project2").attr({href:path});
+	});
 });

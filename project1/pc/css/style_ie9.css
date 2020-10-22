@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+.gallery .keyvisual li {
+	-webkit-transition: none !important;
+	transition: none !important;
+}

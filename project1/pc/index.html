@@ -1,324 +1,479 @@
-<!doctype html>
-<html lang="ko">
- <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> UI 구현 산출물 </title>
-  <link rel="shortcut icon" href="images/icon/favicon.png">
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>gallery :: basic alpha gallery</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
-
+<link rel="stylesheet" href="css/style.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<!--[if IE 9]>
+<link rel="stylesheet" href="css/css_ie9.css">
+<script src="js/main_ie9.js"></script>
+<![endif]-->
+<!--[if gt IE 9]><!--><script src="js/main.js"></script><!--<![endif]-->
 </head>
 
 <body>
-<div class="wrapper">
-	<header id="header">
-		<div class="top">
-			<div class="logo"><h1 id="logo"><a href=""><img src="images/logo.jpg" alt="logo"></a></h1>
-			</div>
-			<nav id="gnb">
+<div class="container">
+	<div class="top">
+		<div class="top_inner">
+			<div class="logo"><a href=""><img src="images/logo.png"></a></div>
+			<div class="menu_list">
 				<ul>
-					<li>
-						<a href="">HOME</a>
-					</li>
-					<li>
-						<a href="">UBOUT US</a>
+					<li><a href="">온해피</a>
 						<ul>
-							<li><a href="">소개</a></li>
-							<li><a href="">오시는길</a></li>
+							<li><a href="">온해피란?</a></li>
+							<li><a href="">국내/해외지부</a></li>
+							<li><a href="">재정보고</a></li>
+							<li><a href="">사업소개</a></li>
 						</ul>
 					</li>
-					<li>
-						<a href="">ROOMS</a>
+					<li><a href="">후원하기</a>
 						<ul>
-							<li><a href="">BLACK</a></li>
-							<li><a href="">WHITE</a></li>
+							<li><a href="">후원가이드</a></li>
+							<li><a href="">후원신청</a></li>
+							<li><a href="">기부금영수증 신청</a></li>
 						</ul>
 					</li>
-					<li>
-						<a href="">RESERVATION</a>
+					<li><a href="">뉴스피드</a>
 						<ul>
-							<li><a href="">실시간예약</a></li>
-							<li><a href="">예약확인</a></li>
+							<li><a href="">해외사업</a></li>
+							<li><a href="">국내사업</a></li>
+							<li><a href="">국제개발협력동아리</a></li>
+							<li><a href="">온라인모금함</a></li>
 						</ul>
 					</li>
-					<li>
-						<a href="">NOTICE</a>
+					<li><a href="">참여하기</a>
+						<ul>
+							<li><a href="">캠페인</a></li>
+							<li><a href="">봉사활동</a></li>
+							<li><a href="">온해피 프렌즈</a></li>
+							<li><a href="">OnU활동</a></li>
+						</ul>
+					</li>
+					<li><a href="">온해피소식</a>
 						<ul>
 							<li><a href="">공지사항</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="">QNA</a>
-						<ul>
-							<li><a href="">FAQ</a></li>
-							<li><a href="">1:1문의</a></li>
+							<li><a href="">언론보도</a></li>
+							<li><a href="">온해피합창단</a></li>
+							<li><a href="">지속가능개발목표 소개</a></li>
+							<li><a href="">기관소식지</a></li>
 						</ul>
 					</li>
 				</ul>
-			</nav>
-		</div>
-	</header>
-	<div class="menu_shadow"></div>
-	<div class="slider">
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-			  <div class="swiper-slide">
-				<div class="description">
-				<span>ROOM EXCAPE</span> <p>
-				<br>
-				괴도 루팡 혹은 명탐정 셜록홈즈와 같은 소설 속의 주인공<br>
-				당신도 될 수 있다!</div>
-				<img src="slider/slider1.jpg" alt="slider1">
-			  </div>
-			  <div class="swiper-slide">
-				<div class="description"> <span>English Ver.</span><p>
-				<br>
-				테마설명, 나래이션, 그리고 힌트까지!<br>
-				외국인 손님분들을 위한 영어 버전이 새로이 추가되었습니다.</div>
-				<img src="slider/slider2.jpg" alt="slider2">
-			  </div>
-			  <div class="swiper-slide">
-				<div class="description"><span>냥이점집 오픈 이벤트</span><p>
-				<br>
-				~5.17일까지 <대마법사의 시험> 기념사진 들고오면 인당 5000원까지 할인!</div>
-				<img src="slider/slider3.jpg" alt="slider3">
-			  </div>
 			</div>
-			<!-- Add Arrows -->
-			<!--<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>-->
-			<!-- Add Pagination -->
-			<div class="swiper-pagination"></div>
-		</div>
-	</div>
-	<section id="content">
-		<div class="rooms clearfix"><!-- 추가 클래스입니다. -->
-			<ul>
-				<li><!-- 첫 번째처럼 마크업하시면 됩니다. -->
-					<div class="img">
-						<a href="#">
-							<span class="num">1</span>
-							<img src="images/rooms/banner_images.jpg" alt="room1">
-						</a>
-						<div class="dimmed"><!-- position absolute -->
-							<a href="" class="detail">상세보기</a>
-							<a href="" class="reserv">예약하기</a>
-						</div>
-					</div>
-					<div class="desc">
-						<dl>
-							<dt>비폴로17호: 우주로의 확장</dt>
-							<dd><span>Nomal</span></dd>
-							<dd>별점 ★★★★★</dd>
-						</dl>
-					</div>
-				</li>
-				<li>
-					<div class="img">
-						<a href="">
-						<span class="num">2</span>
-						<img src="images/rooms/banner_images2.jpg" alt="room2"></a>
-					</div>
-					<div class="desc">
-						<dl>
-							<dt>신비로운 호빗의 집</dt>
-							<dd><span>Nomal</span></dd>
-							<dd>별점 ★★★★★</dd>
-						</dl>
-					</div>
-					<div class="dimmed"><!-- position absolute -->
-						<a href="" class="detail">상세보기</a>
-						<a href="" class="reserv">예약하기</a>
-					</div>
-				</li>
-				<li>
-					<div class="img">
-						<a href="">
-						<span class="num">3</span>
-						<img src="images/rooms/banner_images3.jpg" alt="room3"></a>
-					</div>
-					<div class="desc">
-						<dl>
-							<dt>대저택 레테의 잠겨버린 출구</dt>
-							<dd><span>Hard</span></dd>
-							<dd>별점 ★★★★★</dd>
-						</dl>
-					</div>
-					<div class="dimmed"><!-- position absolute -->
-						<a href="" class="detail">상세보기</a>
-						<a href="" class="reserv">예약하기</a>
-					</div>
-				</li>
-				<li>
-					<div class="img">
-						<a href="">
-						<span class="num">4</span>
-						<img src="images/rooms/banner_images4.jpg" alt="room4"></a>
-					</div>
-					<div class="desc">
-						<dl>
-							<dt>마카오: 꼭두각시 광시곡</dt>
-							<dd><span>Hard</span></dd>
-							<dd>별점 ★★★★★</dd>
-						</dl>
-					</div>
-					<div class="dimmed"><!-- position absolute -->
-						<a href="" class="detail">상세보기</a>
-						<a href="" class="reserv">예약하기</a>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="intro">
-			<div class="intro_inner">
-				<img src="images/banner/banner2.jpg">
-				<div class="text">
-				<span>REALITY ROOM ESCAPE</span><br><br>
-				reality room escape<br>
-				<br>
-				익스케이프는 익스트림(Exstream)과 이스케이프(Escape)의 합성어로 생성되었습니다.
-				<br><br>
-				저희 익스케이프는 시공간을 초월한 가상의 게임을 새롭게 구성하여<br>
-				현실에서 직접 체험할 수 있는 기회를 제공하고 있습니다.
-				<br><br>
-				여러가지 특수 장치, 한 편의 서사시와 같은 스토리와<br>
-				웅장한 배경음악으로 여러분에게 신선한 모험을 선사합니다.
-				<br><br>
-				극한 상황에서의 탈출! 직접 방문하여 경험하십시오!    
-				</div>
-			</div>
-		</div>
-		<div class="room_episode">
-			<div class="room_episode_inner">
-				<span>ROOM EPISODE</span>
-				<ul>
-					<li><div class="epi1">
-						<img src="images/rooms/room1.png">
-						<div class="episode_text">
-						<span><p>Episode 01.</p>노출된 요원<br><br></span>
-						2016년.
-						<br><br>
-						VIP의 경호 임무를 수행 중이던<br>
-						에이전트 6가 실종된다.<br>
-						급하게 출동한 현장에는<br>
-						덩그러니 놓여있는 서류가방 뿐...<br>
-						<br><br>
-						당신은 그를 무사히 구출할 수<br> 
-						있을 것인가.<br>
-						<br><br>
-						마카오, 알비노로 이어지는<br>
-						룸익스케이프 요원시리즈의<br>
-						첫 번째 이야기!
-						<br><br><br>
-						<a href="">상세보기></a>
-						</div>
-					</div></li>
-					<li><div class="epi2">
-						<a href="">
-						<img src="images/rooms/room2.png">
-						<div class="episode_text_box">
-							<div class="episode_text_right">
-								<span><p>Episode 02.</p>
-								어느 구두쇠의 전시회장</span>
-								<br> <br> 
-								지독한 구두쇠로 알려진 백작<br> 
-								그 사후에 남겨진 의문의 전시회장 
-							</div>
-						</div></a>
-					</div></li>
-					<li><div class="epi3"><a href="">
-						<img src="images/rooms/room3.png">
-						<div class="episode_text_box">
-							<div class="episode_text_right">
-								<span><p>Episode 03.</p>
-								트레저쉽:신화 속의 존재</span>
-								<br> <br> 
-								지독한 구두쇠로 알려진 백작<br> 
-								그 사후에 남겨진 의문의 전시회장 
-							</div>
-						</div></a>
-					</div></li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<section id="bottom">
-			<div class="review">
-				<div class="review_title">
-				<span>REVIEW&SNS</span>
-				</div>
-				<ul>
-					<li><a href=""><img src="images/review/review1.png"></a></li>
-					<li><a href=""><img src="images/review/review2.jpg"></a></li>
-					<li><a href=""><img src="images/review/review3.jpg"></a></li>
-					<li><a href=""><img src="images/review/review4.jpg"></a></li>
-					<li><a href=""><img src="images/review/review5.jpg"></a></li>
-				</ul>
-			</div>
-			<div class="caution_area">
-				<div class="caution">
-					주의사항
-				</div>
-				<div class="caution_icon">
+				<div class="login_area">
 					<ul>
-						<li><img src="images/icon/camera_icon.png">
-							<span>사진 촬영 금지</span>
-						</li>
-						<li><img src="images/icon/cut_icon.png">
-							<span>위험물질 반입금지</span>
-						</li>
-						<li><img src="images/icon/warning_icon.png">
-							<span>안전 주의</span>
-						</li>
-						<li><img src="images/icon/cup_icon.png">
-							<span>물품파손주의</span>
-						</li>
+						<li><a href="">로그인</a></li>
+						<li><a href="">회원가입</a></li>
 					</ul>
 				</div>
 			</div>
-	</section>
-	<footer id="footer">
-		<div class="sns_area">
-			<div class="sns_inner">
+		</div>
+	</div>
+	<div class="gallery">
+		<ul class="keyvisual">
+			<li><a href=""><img src="images/slider_img1.jpg"></a>
+				<div class="description">소녀들이 걸어갈 <br> <span class="txt1">꽃길을 함께</span> 만들어주세요.<br>
+				<p>에티오피아에서 만난 14살 '리다'</p>
+				</div>
+				<div class="box">자세히 보기</div>
+			</li>
+			<li><img src="images/slider_img2.jpg">
+				<div class="description">축구를 좋아하는 소년 '검프'<br> <span class="txt2">마음껏 뛰어놀고 </span>싶어요.<br>
+				<p>아이들의 꿈을 지켜주는 신발 한 켤레</p>
+				</div>
+				<div class="box">자세히 보기</div>
+			</li>
+			<li><img src="images/slider_img3.jpg">
+				<div class="description">아프리카-아시아<br> <span class="txt3">101개 행복도서관 </span>프로젝트<br>
+				<p>"책 한권"의 기부로 아이들에게 "꿈"과 "희망"을 심어주세요</p>
+				</div>
+				<div class="box">자세히 보기</div>
+			</li>
+			<li><img src="images/slider_img4.jpg">
+				<div class="description">해외빈곤 아이들의 성장을<br>함께하는 <span class="txt4">1:1아동결연</span><br>
+				<p>지구촌 생명을 살리는 위대한 약속</p>
+				</div>
+				<div class="box">자세히 보기</div>
+			</li>
+		</ul>
+		<ul class="direction_nav">
+			<li class="left"><a href="" title="left"></a></li>
+			<li class="right"><a href="" title="right"></a></li>
+		</ul>
+		<ul class="pagination">
+			<li><a href="">1</a></li>
+			<li><a href="">2</a></li>
+			<li><a href="">3</a></li>
+			<li><a href="">4</a></li>
+		</ul>
+	</div>
+</div>
+<section id="content">
+	<div class="main_banner">
+		<ul>
+			<li>
+				<a href="">
+					<span class="name clearfix">Introduction</span>
+					<span class="desc">기관소개</span>
+					<img src="images/main_ban2.png" alt="">
+				</a>
+			</li>
+			<li><a href="">
+				<span class="name clearfix">fiscal report</span>
+					<span class="desc">재정보고</span>
+					<img src="images/main_ban3.png" alt="">
+			</a></li>
+			<li><a href="">
+				<span class="name clearfix">overseas business</span>
+					<span class="desc">해외사업</span>
+					<img src="images/main_ban4.png" alt="">
+			</a></li>
+			<li><a href="">
+				<span class="name clearfix">domestic business</span>
+					<span class="desc">국내사업</span>
+					<img src="images/main_ban5.png" alt="">
+			</a></li>
+		</ul>
+	</div>
+	<div class="news_area">
+		<div class="title">
+			<p>news</p>
+			<h3>온해피소식</h3>
+		</div>
+		<div class="news">
+			<ul>
+				<li>
+					<dl>
+						<dt>
+							공지사항<div class="more"><a href=""><img src="images/btn2.png"></a></div>
+						</dt>
+						<dd class="news"><a href="">[공지] 정기총회 일정 연기 <br>안내입니다.</a></dd>
+						<dd class="date">2020.02.28</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>
+							언론보도<div class="more"><a href=""><img src="images/btn2.png"></a></div>
+						</dt>
+						<dd class="news"><a href="">[신문] 온해피, 원웨드와<br>소외계층 웨딩서비스...</a></dd>
+						<dd class="date">2020.02.28</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>
+							봉사활동<div class="more"><a href=""><img src="images/btn2.png"></a></div>
+						</dt>
+						<dd class="news"><a href="">온해피 자원봉사활동 및<br>결과 보고서 양식</a></dd>
+						<dd class="date">2020.02.28</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="video_area">
+		<div class="title2">
+			<p>onhappy</p>
+			<h3>온해피 프렌즈</h3>
+		</div>
+		<div class="play">
+			<a href=""><img src="images/btn_play.png"></a>
+		</div>
+		<div class="dimmed"></div>
+		<div class="video">
+			<video id="main_video" src="http://www.onhappy.org/img/friends.mp4" muted>
+		</div>
+		<div class="shortcut">
+			<a href="">바로가기</a>
+		</div>
+	</div>
+
+	<div class="news_feed">
+		<div class="title">
+			<p>news feed</p>
+			<h3>뉴스피드</h3>
+		</div>
+		<div class="business">
+			<!-- <nav> --><!-- 2020-07-28 -->
+			<ul>
+				<li class="tab1">
+					<a href=""><span><img src="images/main_ban4_w.png" alt="">해외사업</span></a>
+				</li>
+				<li class="tab2">
+					<a href=""><span><img src="images/main_ban5_w.png" alt="">국내사업</span></a>
+				</li>
+			</ul>
+			<!-- </nav> --><!-- 2020-07-28 -->
+		</div>
+		<div class="tab_content1">
+			<div class="article">
 				<ul>
-				<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-				<li><a href=""><i class="fab fa-twitter"></i></a></li>
-				<li><a href=""><i class="fab fa-instagram"></i></a></li>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab_img1.jpg" alt="">
+						</div>
+						<div class="desc">
+							<p>해외사업</p>
+							<dl>
+								<dt>에티오피아 양 지원 사업</dt>
+								<dd>토지가 척박하여 농사를 짓기 힘든 에티오피아 아카코 지역의<br>
+								주민들은 주로 양을 키워 생계를 유지합니다.<br>
+								양으로부터 얻을 수 있는 산양유는 영양가 있는 음식이 절대적으로 부족한<br>
+								이 지역 주민들에게 필수적인 영양소를 제공합니다.<br>
+								온해피는 생계 지원 사업의 일환으로서, 아카코 지역 주민들에게<br>
+								양을 지원했습니다.</dd>
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab_img2.jpg" alt="">
+						</div>
+						<div class="desc">
+							<p>해외사업</p>
+							<dl>
+								<dt>'집이 생겼어요' 몽골 게르 지원</dt>
+								<dd>빈곤율이 높은 몽골 수흐바타르구 외곽지역은<br>
+								겨울철 평균 기온이 최고 영하 50도까지 내려가곤 합니다.<br>
+								그런데 이 지역에는 집이 없어, 남의 집 한 켠을 빌려 6~7명의 가족이<br>
+								함께 지내는 가족이 많습니다.<br>
+								이에 온해피는 집이 없는 가정을 선정하여, 보온 효과가 뛰어난<br>
+								몽골 전통가옥 '게르'를 만들어 지원하였습니다.</dd>
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab_img3.jpg" alt="">
+						</div>
+						<div class="desc">
+							<p>해외사업</p>
+							<dl>
+								<dt>우간다 와날레힐 유치원 교육물품 지원</dt>
+								<dd>우간다의 최빈곤 지역인 와날레힐은 해발 2,000m고도에 위치해 있습니다.<br>
+								이 곳 아이들은 학교에 가기 위해서 험난한 산길을 지나며<br>
+								주로 비닐봉지에 책과 연필을 담아 가는데, 산길을 가는 중 찢어지곤 합니다.<br>
+								주민들은 당장 먹고살기도 힘든 현실 때문에 <br>
+								아이들에게 물품을 지원해줄 수 없는 상황입니다.<br>
+								온해피는 가파른 산길을 오가며 학교에 다니는 아이들에게<br> 
+								보다 나은 교육환경을 제공하기 위해 책가방 및 학용품을 지원하였습니다. 
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab_img4.jpg" alt="">
+						</div>
+						<div class="desc">
+							<p>해외사업</p>
+							<dl>
+								<dt>필리핀 싱글맘들에게 찾아온 선물 "재봉틀"</dt>
+								<dd>최근 코로나19의 여파로 필리핀에도 경제난이 심각했습니다.<br> 
+								특히 홀로 아이를 키우고 있는 싱글맘들은 <br> 
+								그나마 하던 소일거리도 없어진 상황이었습니다.<br> 
+								장애가 있고, 몸이 아픈 와중에도 열심히 일해 <br> 
+								3,4명의 아이들을 홀로 키우고 있는 강인한 엄마들입니다.<br> 
+								온해피는 이분들의 안정적인 경제활동을 위해 재봉틀과 재봉기술 교육을 제공했습니다.
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab_img5.jpg" alt="">
+						</div>
+						<div class="desc">
+							<p>해외사업</p>
+							<dl>
+								<dt>필리핀, 코로나19마스크 지원</dt>
+								<dd>코로나 19로 인해 시행된 지역봉쇄로 인해<br> 
+								필리핀의 많은 사람들이 일자리를 잃었습니다.<br> 
+								대다수 일용직으로 살아가는 필리핀 주민들은 <br> 
+								가장 필요한 마스크 한 장도 마련하기 쉽지 않습니다.<br> 
+								온해피 필리핀 지부에서는 외부의 도움이 절실한 이 지역에<br> 
+								마스크를 들고 방문했습니다.
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="control">
+				<ul>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="info_area">
-			<div class="info_title"> COMPANY INFO </div>
-			<div class="info_text"> 
-			<div class="logo"><img src="images/logo.jpg" alt="logo"> </div>
-			Company Name (주) 방탈출     ㅣ     CEO 최이정    ㅣ   E-mail ex_cape@naver.com
-			<br> Address 신촌블랙점 서울 서대문구연세로4길, 3F     ㅣ    신촌화이트점 서울 서대문구 명물길 66, 2F
-			<br> Phone 신촌블랙점 03- 262-5689     ㅣ     신촌화이트점 03- 293- 5689
+		<div class="tab_content2">
+			<div class="article">
+				<ul>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab2_img.jpg" alt="">
+						</div>
+						<div class="desc">
+							<p>국내사업</p>
+							<dl>
+								<dt>혼밥이 두려운 어르신께 사랑의 도시락 배달</dt>
+								<dd>온해피는 돌봐줄 보호자가 없는 취약계층 홀몸어르신들을 위해<br>
+								긴급도시락을 지원하고 있습니다.<br>
+								맛있는 반찬과 도시락도 반갑지만, 사람의 온기를 더 그리워하십니다.<br>
+								오랜만에 찾아온 봉사자들과의 즐거운 대화로 행복해 하셨습니다.<br>
+								후원자분들의 관심과 사랑이 모여 홀로 사시는 어르신들께 반찬 배달을<br>
+								성공리에 마칠 수 있었습니다.</dd>
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab2_img2.jpg" alt="">
+						</div>
+						<div class="desc">
+							<p>국내사업</p>
+							<dl>
+								<dt>홀몸어르신들을 위한 긴급도시락, 마스크 지원</dt>
+								<dd>올해 초 코로나19로 전국민이 힘든 시간을 보내고 있을 때,<br>
+								우리 이웃의 소외된 홀몸어르신들은<br>
+								사회로부터 완전히 고립된 처지에 놓여있었습니다.<br>
+								온해피는 돌봐줄 보호자가 없는 취약계층 홀몸어르신들을 위해<br>
+								긴급도시락과 마스크를 지원해 드렸습니다.
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab2_img3.jpg" alt="">
+						</div>
+						<div class="desc">
+							<p>국내사업</p>
+							<dl>
+								<dt>정일영 국회의원, 온해피와 기부협약체결</dt>
+								<dd>7월 21일, 정일영 국회의원님(기획재정위, 인천 연수을)이<br>
+								온해피 사무실에 방문하여 정기후원협약을 체결했습니다.<br>
+								의원님은 후보시절 공약으로 6개월간 세비 50%를 기부하겠다고 밝힌 바 있으며,<br>
+								이번에 온해피와 함께 공약을 이행하기로 했습니다.
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab2_img4.png" alt="">
+						</div>
+						<div class="desc">
+							<p>국내사업</p>
+							<dl>
+								<dt>온해피 세계시민교육</dt>
+								<dd>곡란중학교 1,2,3학년 전 학급을 대상으로 <br>
+								'나눔 실천 봉사프로그램'이라는 주제로 세계시민 활동 교육을 진행하였습니다.<br>
+								이번 세계시민교육을 통해 지구촌 빈곤 상황을 인지하고<br>
+								세계 문제를 함께 고민하며 '지금 우리가 할 수 있는 일'에 대한<br>
+								실천의 중요성을 느끼고 깨닫는 시간을 가졌습니다.
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+					<li><!-- 반복 리스트 : 2020-07-28 -->
+						<div class="image">
+							<img src="images/tab2_img5.jpg" alt="">
+						</div>
+						<div class="desc">
+							<p>국내사업</p>
+							<dl>
+								<dt>온해피 2019 국제기구-MICE커리어페어 참여 및 부스 운영</dt>
+								<dd>지난 9월 27일 인천 송도 컨벤시아에서는 외교부, <br>
+								인천광역시에서 주최한 국제기구-MICE 커리어페어 행사가 있었습니다.<br>
+								온해피는 지난2015년부터 매년 커리어페어에 참가하고 있으며, 국제기구 및 <br>
+								MICE산업 분야 진출 희망 인력에 대한 전문교육 및 정보교류의 장을 마련하고,<br>
+								희망자를 대상으로 면접을 실시하였습니다. 
+							</dl>
+							<a href="">자세히 보기</a>
+						</div>
+					</li>
+				</ul>
 			</div>
+			<div class="control">
+				<ul>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="sponsor_banner">
+		<div class="banner_img">
+			<div class="banner_text">
+				<span>해맑은 아이들이 잘 자랄 수 있도록
+				<br>키다리 아저씨가 되어 주세요.</span>
+			</div>
+		</div>
+		<div class="banners clearfix">
+				<div class="banner_box1"><a href="">1:1결연</a></div>
+				<div class="banner_box2"><a href="">정기후원</a></div>
+				<div class="banner_box3"><a href="">일시후원</a></div>
+		</div>
+		<div class="shortcut">
+			<a href="">온해피 후원이 처음이신가요?</a>
+		</div>
+	</div>
+</section>
+<footer id="footer">
+	<div class="terms"><!-- 중앙 정렬 -->
+		<div class="terms_top">
+			<ul>
+				<li><a href="">이용약관</a></li>
+				<li><a href="">개인정보처리방침</a></li>
+				<li><a href="">이메일 무단수집거부</a></li>
+				<li><a href="">온해피 소개</a></li>
+			</ul>
+			<div class="famliysite">
+				<dl>
+					<dt><a href="#">패밀리사이트</a></dt>
+					<dd>
+						<ul>
+							<li><a href="">site1</a></li>
+							<li><a href="">site2</a></li>
+							<li><a href="">site3</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="sns">
+			<ul>
+				<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href=""><i class="fab fa-twitter"></i></a></li>
+				<li><a href=""><i class="fab fa-instagram"></i></a></li>
+			</ul>
 		</div>
 		<div class="copyright">
-			<div class="footer_img">
-			<img src="images/banner/copyright.jpg" alt="copyright">
-			</div>
-			<div class="footer_text">
-			copyright ⓒ 2015 ex-cape.com. All right reserved.
-			</div>
+			온해피(사단법인)  고유번호 : 131-82-16063  주소 : 인천광역시 연수구 컨벤시아대로 233, 업무동 4층 410-A
+			<br>
+			대표자 : 배인식Tel : 032-422-1003  Fax : 032-422-6003  E-mail : korea@onhappy.org
+			<br>
+			Copyright  2018 온해피(사단법인) All rights reserved.
 		</div>
-	</footer>
-</div>
+	</div>
+</footer>
 </body>
 </html>
